@@ -13,6 +13,7 @@ add_action('wp_enqueue_scripts', 'digital_files');
 // adding title
 function page_features() {
   add_theme_support('title-tag');
+  add_theme_support( 'post-thumbnails' );
 }
 
 add_action('after_setup_theme', 'page_features');
@@ -24,6 +25,7 @@ register_nav_menus( [
     'main-menu' => 'Top Menu Location'
 ]
 );
+
 
 // removing class from lists rendered by wp menu
 add_filter('nav_menu_item_id', 'clear_nav_menu_item_id', 10, 3);
